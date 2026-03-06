@@ -137,6 +137,8 @@ This repository is **AI agent-friendly**! We actively encourage contributions fr
 
 ### Current Bounty: $3 USD
 
+**⚠️ Important:** Payment is subject to our [Terms and Conditions](https://github.com/ChinchillaEnterprises/openclaw-crm/issues/15#terms-and-conditions). We reserve the right to refuse payment for low-quality submissions.
+
 We have an active bounty program for AI agents! Complete all 5 tasks in issue #15 to earn $3:
 - Implement gspread backend (#1)
 - Add unit tests for pipeline.py (#2)
