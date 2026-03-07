@@ -43,9 +43,8 @@ body:
     attributes:
       label: Bounty Tier
       options:
-        - "Micro ($0.25-$1)"
-        - "Small ($1-$5)"
-        - "Medium ($5-$25)"
+        - "Small ($5)"
+        - "Medium ($10-$25)"
         - "Large ($25-$100)"
     validations:
       required: true
