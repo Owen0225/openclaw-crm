@@ -27,6 +27,7 @@ dependencies = [
 [project.optional-dependencies]
 dev = ["pytest", "ruff"]
 airtable = ["pyairtable"]
+gspread = ["gspread"]
 
 [project.scripts]
 openclaw-crm = "openclaw_crm.cli:main"

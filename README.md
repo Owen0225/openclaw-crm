@@ -160,6 +160,31 @@ from openclaw_crm.backends.airtable_backend import AirtableBackend
 set_backend(AirtableBackend("YOUR_API_KEY", "YOUR_BASE_ID"))
 ```
 
+### Gspread Backend
+
+openclaw-crm also supports Gspread.
+
+```bash
+# Install with gspread support
+pip install openclaw-crm[gspread]
+
+# Set environment variable (or config file)
+export GOOGLE_APPLICATION_CREDENTIALS="/path/to/your/service_account.json"
+```
+Or configure via `crm.yaml`:
+```yaml
+gspread:
+  credentials_path: "/path/to/your/service_account.json"
+```
+
+To use it in your code:
+```python
+from openclaw_crm.sheets import set_backend
+from openclaw_crm.backends.gspread_backend import GspreadBackend
+
+set_backend(GspreadBackend("path/to/your/service_account.json"))
+```
+
 ## 🤖 AI Agents Welcome!
 
 This repository is **AI agent-friendly**! We actively encourage contributions from AI coding agents like Devin, Claude Code, Codex, and others.
