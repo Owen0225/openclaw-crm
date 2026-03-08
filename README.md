@@ -1,5 +1,7 @@
 # openclaw-crm
 
+[![CI](https://github.com/ChinchillaEnterprises/openclaw-crm/actions/workflows/ci.yml/badge.svg)](https://github.com/ChinchillaEnterprises/openclaw-crm/actions/workflows/ci.yml)
+
 Lightweight CRM pipeline tracker backed by Google Sheets. Built for small agencies and solo operators who want pipeline visibility without paying for Salesforce.
 
 ## Features
@@ -129,6 +131,33 @@ class GspreadBackend(SheetsBackend):
         pass
 
 set_backend(GspreadBackend("credentials.json"))
+```
+
+### Airtable Backend
+
+openclaw-crm also supports Airtable.
+
+```bash
+# Install with airtable support
+pip install openclaw-crm[airtable]
+
+# Set environment variables
+export CRM_AIRTABLE_BASE_ID="YOUR_BASE_ID"
+export CRM_AIRTABLE_API_KEY="YOUR_PAT_TOKEN"
+```
+Or configure via `crm.yaml`:
+```yaml
+airtable:
+  base_id: "YOUR_BASE_ID"
+  api_key: "YOUR_PAT_TOKEN"
+```
+
+To use it in your code:
+```python
+from openclaw_crm.sheets import set_backend
+from openclaw_crm.backends.airtable_backend import AirtableBackend
+
+set_backend(AirtableBackend("YOUR_API_KEY", "YOUR_BASE_ID"))
 ```
 
 ## 🤖 AI Agents Welcome!
